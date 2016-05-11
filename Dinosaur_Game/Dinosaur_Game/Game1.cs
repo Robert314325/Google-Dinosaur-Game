@@ -124,7 +124,7 @@ namespace Dinosaur_Game
                     timeElapsed = 0f;
                 }
 
-                dinosaur.DinosaurTexture = Content.Load<Texture2D>("Sprites/Dinosaur");
+                dinosaur.DinosaurTexture = Content.Load<Texture2D>("Sprites/Player/Dinosaur");
                 //Draw Dinosaur : Frame : 0 - 40
                 spriteBatch.Draw(dinosaur.DinosaurTexture, dinosaur.Position, new Rectangle(dinosaur.Frame, 0, dinosaur.DinosaurTexture.Width - 40, dinosaur.DinosaurTexture.Height), Color.White);
             }

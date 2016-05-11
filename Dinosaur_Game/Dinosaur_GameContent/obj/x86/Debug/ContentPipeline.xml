@@ -11,22 +11,22 @@
       <Time>2016-05-11T17:29:42.8762685+02:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\Dinosaur.png</Source>
-      <Name>Sprites\Dinosaur</Name>
+      <Source>Sprites\Player\Dinosaur.png</Source>
+      <Name>Sprites\Player\Dinosaur</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Dinosaur.xnb</Output>
-      <Time>2016-05-11T17:29:42.8802688+02:00</Time>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Player\Dinosaur.xnb</Output>
+      <Time>2016-05-11T17:58:45.2986293+02:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\DefaultDinosaur.png</Source>
-      <Name>Sprites\DefaultDinosaur</Name>
+      <Source>Sprites\Player\DefaultDinosaur.png</Source>
+      <Name>Sprites\Player\DefaultDinosaur</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb</Output>
-      <Time>2016-05-11T17:29:42.8782687+02:00</Time>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Player\DefaultDinosaur.xnb</Output>
+      <Time>2016-05-11T17:58:45.2976292+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

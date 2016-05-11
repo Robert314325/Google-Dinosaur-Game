@@ -49,14 +49,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\Dinosaur.png">
+    <Compile Include="Sprites\Player\Dinosaur.png">
       <Name>Dinosaur</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\DefaultDinosaur.png">
+    <Compile Include="Sprites\Player\DefaultDinosaur.png">
       <Name>DefaultDinosaur</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

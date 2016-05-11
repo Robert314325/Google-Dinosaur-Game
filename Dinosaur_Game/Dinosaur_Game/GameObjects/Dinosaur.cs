@@ -22,7 +22,7 @@ namespace Dinosaur_Game
             this.content = content;
             this.Frame = 0;
             this.Position = new Vector2(20,104);
-            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Dinosaur");
+            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/Dinosaur");
             this.yStart = this.Position.Y;
             this.IsJumping = false;
             this.IsCollide = false;
@@ -53,7 +53,7 @@ namespace Dinosaur_Game
         public void Jump()
         {
             // Set Dinosaur Frame to default !
-            this.DinosaurTexture = content.Load<Texture2D>("Sprites/DefaultDinosaur");
+            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
 
             this.IsJumping = true;
             this.JumpSpeed = this.jumpSpeed;
@@ -62,7 +62,7 @@ namespace Dinosaur_Game
         public void WaitJump()
         {
             // Check for collision ..
-            this.DinosaurTexture = content.Load<Texture2D>("Sprites/DefaultDinosaur");
+            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
 
             this.Position.Y += this.JumpSpeed;
             this.JumpSpeed += 0.7f;
