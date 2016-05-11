@@ -13,3 +13,12 @@ C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj
 C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.exe
 C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.pdb
 C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Background\Background.xnb
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Dinosaur.xnb
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.exe
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.pdb
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.exe
+C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.pdb

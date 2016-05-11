@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Background\Background.xnb</Output>
-      <Time>2016-05-11T14:04:09.944114+02:00</Time>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Background\Background.xnb</Output>
+      <Time>2016-05-11T17:29:42.8762685+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Dinosaur.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Dinosaur.xnb</Output>
-      <Time>2016-05-11T16:26:26.4515212+02:00</Time>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Dinosaur.xnb</Output>
+      <Time>2016-05-11T17:29:42.8802688+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\DefaultDinosaur.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb</Output>
-      <Time>2016-05-11T16:34:35.4724916+02:00</Time>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb</Output>
+      <Time>2016-05-11T17:29:42.8782687+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,10 +34,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_GameContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_GameContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_GameContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
