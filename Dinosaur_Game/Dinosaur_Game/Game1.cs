@@ -113,7 +113,6 @@ namespace Dinosaur_Game
             Options.SpeedValue += Options.IncreadingSpeedValue;
             spriteBatch.Draw(background.Texture,new Vector2(0,0) , new Rectangle(Options.SpeedValue, 0, background.Texture.Width, background.Texture.Height), Color.White);
 
-            
             // Update Dinosaur Frame every 0.1f if it's running !
             if (!dinosaur.IsJumping)
             {
