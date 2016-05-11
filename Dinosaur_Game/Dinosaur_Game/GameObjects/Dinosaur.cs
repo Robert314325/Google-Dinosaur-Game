@@ -6,7 +6,7 @@ namespace Dinosaur_Game
 {
     class Dinosaur 
     {
-        private float jumpSpeed = -11.3f;
+        private float jumpSpeed = -11.2f;
 
         public Vector2 Position;
         public Texture2D DinosaurTexture { get; set; }
