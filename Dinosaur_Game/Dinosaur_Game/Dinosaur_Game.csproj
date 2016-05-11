@@ -109,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\Cloud.cs" />
     <Compile Include="GameSettings\Options.cs" />
     <Compile Include="GameObjects\Background.cs" />
     <Compile Include="GameObjects\Dinosaur.cs" />
@@ -116,7 +117,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameObjects\Sprite.cs" />
-    <Compile Include="GameObjects\Tree.cs" />
+    <Compile Include="GameObjects\Cactus.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dinosaur_GameContent\Dinosaur_GameContent.contentproj">

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -22,6 +21,7 @@ namespace Dinosaur_Game
         //
         Dinosaur dinosaur;
         Background background;
+        Cloud cloud;
 
         public Game1()
         {
@@ -46,6 +46,9 @@ namespace Dinosaur_Game
             // Initialize Dinosaur Sprite
             dinosaur = new Dinosaur(this.Content);
             background = new Background(this.Content);
+
+            cloud = new Cloud(this.Content,new Vector2(606,50));
+            Cloud.CloudList.Add(cloud);
 
             //
             base.Initialize();
@@ -72,6 +75,9 @@ namespace Dinosaur_Game
             // TODO: Unload any non ContentManager content here
         }
 
+        float cloudTimeElapsed = 0f;
+        float cactusTimeElapsed = 0f;
+
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -80,6 +86,34 @@ namespace Dinosaur_Game
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
+
+            // ADD a cloud to the list every <TimeInterval>
+            cloudTimeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (cloudTimeElapsed > Cloud.Random.Next(4,5))
+            {
+                Cloud.CloudList.Add(new Cloud(this.Content,new Vector2(603,Cloud.Random.Next(40,80))));
+                cloudTimeElapsed = 0f;
+            }
+
+            // ADD a Cactus to the list every <TimeInterval>
+            cactusTimeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (cactusTimeElapsed > Cactus.Random.Next(1,5))
+            {
+                Cactus.CactusList.Add(new Cactus(this.Content, new Vector2(603,99)));
+                cactusTimeElapsed = 0f;
+            }
+
+            // Update cloud X Position
+            foreach (Cloud cloud in Cloud.CloudList)
+            {
+                cloud.Position.X--;
+            }
+
+            // Update Cactus X Position
+            foreach (Cactus cactus in Cactus.CactusList)
+            {
+                cactus.Position.X -= 5;
+            }
 
             // Check Collision while Dinosaur is runnning !
             if (dinosaur.IsJumping)
@@ -113,6 +147,18 @@ namespace Dinosaur_Game
             // Draw backgroud ! Scroll Background ++
             Options.SpeedValue += Options.IncreadingSpeedValue;
             spriteBatch.Draw(background.Texture,new Vector2(0,0) , new Rectangle(Options.SpeedValue, 0, background.Texture.Width, background.Texture.Height), Color.White);
+
+            // Draw All Clouds 
+            foreach (Cloud cloud in Cloud.CloudList)
+            {
+                spriteBatch.Draw(cloud.Texture, cloud.Position, new Rectangle(0, 0, cloud.Texture.Width, cloud.Texture.Height), Color.White);
+            }
+
+            // Draw All Cactus
+            foreach (Cactus cactus in Cactus.CactusList)
+            {
+                spriteBatch.Draw(cactus.Texture, cactus.Position, new Rectangle(0, 0, cactus.Texture.Width, cactus.Texture.Height), Color.White);
+            }
 
             // Update Dinosaur Frame every 0.1f if it's running !
             if (!dinosaur.IsJumping)
