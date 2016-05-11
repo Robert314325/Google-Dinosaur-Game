@@ -21,7 +21,7 @@ namespace Dinosaur_Game
         {
             this.content = content;
             this.Frame = 0;
-            this.Position = new Vector2(20,104);
+            this.Position = new Vector2(20,102);
             this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/Dinosaur");
             this.yStart = this.Position.Y;
             this.IsJumping = false;

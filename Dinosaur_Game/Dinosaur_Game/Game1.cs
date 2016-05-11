@@ -97,6 +97,7 @@ namespace Dinosaur_Game
 
             base.Update(gameTime);
         }
+
         float timeElapsed = 0f;
         /// <summary>
         /// This is called when the game should draw itself.
