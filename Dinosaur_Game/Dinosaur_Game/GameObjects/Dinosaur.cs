@@ -62,8 +62,7 @@ namespace Dinosaur_Game
         public void WaitJump()
         {
             // Check for collision ..
-            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
-
+            
             this.Position.Y += this.JumpSpeed;
             this.JumpSpeed += 0.7f;
 

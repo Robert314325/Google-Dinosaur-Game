@@ -117,6 +117,8 @@ namespace Dinosaur_Game
             // Update Dinosaur Frame every 0.1f if it's running !
             if (!dinosaur.IsJumping)
             {
+                dinosaur.DinosaurTexture = Content.Load<Texture2D>("Sprites/Player/Dinosaur");
+
                 timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (timeElapsed > 0.1f)
                 {
@@ -124,7 +126,6 @@ namespace Dinosaur_Game
                     timeElapsed = 0f;
                 }
 
-                dinosaur.DinosaurTexture = Content.Load<Texture2D>("Sprites/Player/Dinosaur");
                 //Draw Dinosaur : Frame : 0 - 40
                 spriteBatch.Draw(dinosaur.DinosaurTexture, dinosaur.Position, new Rectangle(dinosaur.Frame, 0, dinosaur.DinosaurTexture.Width - 40, dinosaur.DinosaurTexture.Height), Color.White);
             }
