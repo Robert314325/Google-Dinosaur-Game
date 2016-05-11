@@ -1,0 +1,3 @@
+Content\Sprites\Background\Background.xnb
+Content\Sprites\Dinosaur.xnb
+Content\Sprites\DefaultDinosaur.xnb

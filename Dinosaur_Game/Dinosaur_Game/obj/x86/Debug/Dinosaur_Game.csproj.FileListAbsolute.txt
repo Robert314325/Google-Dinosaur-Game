@@ -1,0 +1,15 @@
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.exe
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.pdb
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.exe
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.pdb
+c:\documents and settings\administrateur\mes documents\visual studio 2010\Projects\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DinosaurTexture.xnb
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Background\Background.xnb
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Dinosaur.xnb
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.exe
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Dinosaur_Game.pdb
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.exe
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\obj\x86\Debug\Dinosaur_Game.pdb
+C:\Users\Administrator\Desktop\Pro\Dinosaur_Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\DefaultDinosaur.xnb
