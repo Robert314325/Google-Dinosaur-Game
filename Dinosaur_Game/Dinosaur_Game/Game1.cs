@@ -22,6 +22,7 @@ namespace Dinosaur_Game
         Dinosaur dinosaur;
         Background background;
         Cloud cloud;
+        Cactus cactus;
         Score score;
 
         public Game1()
@@ -47,6 +48,7 @@ namespace Dinosaur_Game
             // Initialize Sprites
             dinosaur = new Dinosaur(this.Content);
             background = new Background(this.Content);
+            cactus = new Cactus();
             score = new Score(this.Content);
 
             cloud = new Cloud(this.Content,new Vector2(606,50));
@@ -79,7 +81,7 @@ namespace Dinosaur_Game
 
         private float cloudTimeElapsed = 0f;
         private float cactusTimeElapsed = 0f;
-
+        int i = 0;
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -160,10 +162,14 @@ namespace Dinosaur_Game
             //if (Options.IsPlaying) score.UpdateText(int.Parse(score.Text) + 1);
             // spriteBatch.DrawString(score.ScoreFont,score.Text,new Vector2(542,11),Color.Black);
 
+            var t = new Texture2D(GraphicsDevice, 1, 1);
+            t.SetData(new[] { Color.White });
+
             // Draw All Cactus
             foreach (Cactus cactus in Cactus.CactusList)
             {
                 spriteBatch.Draw(cactus.Texture, cactus.Position, new Rectangle(0, 0, cactus.Texture.Width, cactus.Texture.Height), Color.White);
+                spriteBatch.Draw(t, new Rectangle((int)cactus.Position.X,(int)cactus.Position.Y,cactus.Texture.Width,cactus.Texture.Height), Color.Black);
             }
 
             // Update Dinosaur Frame every 0.1f if it's running !

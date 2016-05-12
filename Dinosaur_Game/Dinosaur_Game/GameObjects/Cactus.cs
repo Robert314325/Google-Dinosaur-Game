@@ -14,6 +14,10 @@ namespace Dinosaur_Game
         public static List<Texture2D> CactusTextures = new List<Texture2D>() { null, null, null, null, null };
         public static List<Cactus> CactusList = new List<Cactus>();
 
+        public Cactus()
+        {
+        }
+
         public Cactus(ContentManager content, Vector2 position)
         {
             this.InitializeList(content);
@@ -30,6 +34,12 @@ namespace Dinosaur_Game
                 case 4: position.Y = 100; break;
             }
             this.Position = position;
+        }
+
+        public Rectangle BoundingBox(Cactus cactus)
+        {
+            return new Rectangle((int)cactus.Position.X, (int)cactus.Position.Y, cactus.Texture.Width, cactus.Texture.Height);
+
         }
 
         private void InitializeList(ContentManager content)
