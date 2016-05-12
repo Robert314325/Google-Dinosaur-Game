@@ -59,12 +59,13 @@ namespace Dinosaur_Game
             this.JumpSpeed = this.jumpSpeed;
         }
 
-        public void WaitJump()
+        float increasingValue = 0f;
+        public void WaitJump ()
         {
             // Check for collision ..
-            
             this.Position.Y += this.JumpSpeed;
-            this.JumpSpeed += 0.7f;
+            increasingValue = 0.7f;
+            this.JumpSpeed += increasingValue;
 
             if (this.Position.Y >= this.yStart)
             {

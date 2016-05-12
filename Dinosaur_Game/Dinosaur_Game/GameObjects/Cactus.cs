@@ -7,10 +7,8 @@ using System.Collections.Generic;
 
 namespace Dinosaur_Game
 {
-    class Cactus
+    class Cactus : Sprite
     {
-        public Vector2 Position;
-        public Texture2D Texture;
         public static Random Random = new Random();
 
         public static List<Texture2D> CactusTextures = new List<Texture2D>() { null, null, null, null, null };
@@ -20,13 +18,16 @@ namespace Dinosaur_Game
         {
             this.InitializeList(content);
 
-            int random = Random.Next(0,2);
+            int random = Random.Next(0,5);
             this.Texture = CactusTextures[random];
 
             switch (random)
             {
                 case 0: position.Y = 99; break;
                 case 1: position.Y = 115 ; break;
+                case 2: position.Y = 112; break;
+                case 3: position.Y = 114; break;
+                case 4: position.Y = 100; break;
             }
             this.Position = position;
         }
@@ -35,15 +36,15 @@ namespace Dinosaur_Game
         {
             Texture2D cactus = content.Load<Texture2D>("Sprites/Cactus/Cactus");
             Texture2D cactus2 = content.Load<Texture2D>("Sprites/Cactus/Cactus2");
-            //Texture2D cactus3 = content.Load<Texture2D>("Sprites/Cactus/Cactus3");
-            //Texture2D cactus4 = content.Load<Texture2D>("Sprites/Cactus/Cactus4");
-            //Texture2D cactus5 = content.Load<Texture2D>("Sprites/Cactus/Cactus5");
+            Texture2D cactus3 = content.Load<Texture2D>("Sprites/Cactus/Cactus3");
+            Texture2D cactus4 = content.Load<Texture2D>("Sprites/Cactus/Cactus4");
+            Texture2D cactus5 = content.Load<Texture2D>("Sprites/Cactus/Cactus5");
 
             CactusTextures[0] = cactus;
             CactusTextures[1] = cactus2;
-            //CactusTextures.Add(cactus3);
-            //CactusTextures.Add(cactus4);
-            //CactusTextures.Add(cactus5);
+            CactusTextures[2] = cactus3;
+            CactusTextures[3] = cactus4;
+            CactusTextures[4] = cactus5;
         }
     }
 }

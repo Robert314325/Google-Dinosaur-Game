@@ -22,6 +22,7 @@ namespace Dinosaur_Game
         Dinosaur dinosaur;
         Background background;
         Cloud cloud;
+        Score score;
 
         public Game1()
         {
@@ -43,9 +44,10 @@ namespace Dinosaur_Game
         {
             // TODO: Add your initialization logic here
 
-            // Initialize Dinosaur Sprite
+            // Initialize Sprites
             dinosaur = new Dinosaur(this.Content);
             background = new Background(this.Content);
+            score = new Score(this.Content);
 
             cloud = new Cloud(this.Content,new Vector2(606,50));
             Cloud.CloudList.Add(cloud);
@@ -75,8 +77,8 @@ namespace Dinosaur_Game
             // TODO: Unload any non ContentManager content here
         }
 
-        float cloudTimeElapsed = 0f;
-        float cactusTimeElapsed = 0f;
+        private float cloudTimeElapsed = 0f;
+        private float cactusTimeElapsed = 0f;
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -123,9 +125,9 @@ namespace Dinosaur_Game
             else
             {
                 KeyboardState keyState = Keyboard.GetState();
-                if (keyState.IsKeyDown(Keys.Space) || keyState.IsKeyDown(Keys.Up))
+                if (keyState.IsKeyDown(Keys.Space))
                 {
-                    dinosaur.Jump();
+                    dinosaur.Jump();     
                 }
             }
 
@@ -153,6 +155,10 @@ namespace Dinosaur_Game
             {
                 spriteBatch.Draw(cloud.Texture, cloud.Position, new Rectangle(0, 0, cloud.Texture.Width, cloud.Texture.Height), Color.White);
             }
+
+            // Update Player Still Playing And Draw Current Score
+            //if (Options.IsPlaying) score.UpdateText(int.Parse(score.Text) + 1);
+            // spriteBatch.DrawString(score.ScoreFont,score.Text,new Vector2(542,11),Color.Black);
 
             // Draw All Cactus
             foreach (Cactus cactus in Cactus.CactusList)

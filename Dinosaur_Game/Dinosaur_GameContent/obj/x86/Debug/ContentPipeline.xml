@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Player\Dinosaur.xnb</Output>
-      <Time>2016-05-11T18:02:07.3324204+02:00</Time>
+      <Time>2016-05-11T16:50:26+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Player\DefaultDinosaur.png</Source>
@@ -26,7 +26,61 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Player\DefaultDinosaur.xnb</Output>
-      <Time>2016-05-11T18:02:07.3294202+02:00</Time>
+      <Time>2016-05-11T16:45:44+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Background\Cloud.png</Source>
+      <Name>Sprites\Background\Cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Background\Cloud.xnb</Output>
+      <Time>2016-05-11T19:36:29.0290412+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Cactus\Cactus.png</Source>
+      <Name>Sprites\Cactus\Cactus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Cactus\Cactus.xnb</Output>
+      <Time>2016-05-11T20:15:25.1721611+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Cactus\Cactus2.png</Source>
+      <Name>Sprites\Cactus\Cactus2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Cactus\Cactus2.xnb</Output>
+      <Time>2016-05-11T20:48:16.1943255+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Cactus\Cactus3.png</Source>
+      <Name>Sprites\Cactus\Cactus3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Cactus\Cactus3.xnb</Output>
+      <Time>2016-05-12T00:27:11.8013002+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Cactus\Cactus4.png</Source>
+      <Name>Sprites\Cactus\Cactus4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Cactus\Cactus4.xnb</Output>
+      <Time>2016-05-12T21:59:28.2708084+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Cactus\Cactus5.png</Source>
+      <Name>Sprites\Cactus\Cactus5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Administrator\Documents\GitHub\Google-Dinosaur-Game\Dinosaur_Game\Dinosaur_Game\bin\x86\Debug\Content\Sprites\Cactus\Cactus5.xnb</Output>
+      <Time>2016-05-12T22:04:03.6545595+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

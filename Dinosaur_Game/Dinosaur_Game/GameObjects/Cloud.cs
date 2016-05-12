@@ -7,11 +7,8 @@ using System.Collections.Generic;
 
 namespace Dinosaur_Game
 {
-    class Cloud
+    class Cloud : Sprite
     {
-        public Vector2 Position;
-        public Texture2D Texture;
-
         public static Random Random = new Random();
         public static List<Cloud> CloudList = new List<Cloud>(); 
 
