@@ -13,6 +13,7 @@ namespace Dinosaur_Game
 
         public static List<Texture2D> CactusTextures = new List<Texture2D>() { null, null, null, null, null };
         public static List<Cactus> CactusList = new List<Cactus>();
+        public static List<Rectangle> CactusBoundingBox = new List<Rectangle>();
 
         public Cactus()
         {

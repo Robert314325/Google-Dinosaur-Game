@@ -15,6 +15,9 @@ namespace Dinosaur_Game
         public bool IsJumping { get; set; }
         public bool IsCollide { get; set; }
         public int Frame { get; set; }
+
+        public Rectangle BoundingBox { get; set; }
+
         private ContentManager content;
 
         public Dinosaur(ContentManager content)
@@ -27,6 +30,9 @@ namespace Dinosaur_Game
             this.IsJumping = false;
             this.IsCollide = false;
             this.JumpSpeed = 0;
+
+            this.BoundingBox = new Rectangle((int)this.Position.X + 6, (int)this.Position.Y,
+                                                                        this.DinosaurTexture.Width - 52, this.DinosaurTexture.Height);
         }
 
         public void UpdateFrame()
@@ -62,14 +68,24 @@ namespace Dinosaur_Game
         float increasingValue = 0f;
         public void WaitJump ()
         {
-            // Check for collision ..
-            this.Position.Y += this.JumpSpeed;
+            // Update Y position : Dinosaur and BoundingBox
+            if (Options.GameState != "Lose") { this.Position.Y += this.JumpSpeed; }
+
+            Rectangle boundingBox = this.BoundingBox;
+            boundingBox.Y = (int)this.Position.Y;
+            this.BoundingBox = boundingBox;
+
             increasingValue = 0.7f;
             this.JumpSpeed += increasingValue;
 
             if (this.Position.Y >= this.yStart)
             {
                 this.Position.Y = this.yStart;
+
+                boundingBox = this.BoundingBox;
+                boundingBox.Y = (int)this.Position.Y;
+                this.BoundingBox = boundingBox;
+
                 this.IsJumping = false;
             }
         }
