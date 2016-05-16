@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="GameObjects\Cloud.cs" />
     <Compile Include="GameObjects\Score.cs" />
+    <Compile Include="GameSettings\GameState.cs" />
     <Compile Include="GameSettings\Options.cs" />
     <Compile Include="GameObjects\Background.cs" />
     <Compile Include="GameObjects\Dinosaur.cs" />

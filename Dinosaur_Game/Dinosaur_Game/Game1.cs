@@ -51,6 +51,7 @@ namespace Dinosaur_Game
             background = new Background(this.Content);
             cactus = new Cactus();
             score = new Score(this.Content);
+            Options.Player = dinosaur;
 
             cloud = new Cloud(this.Content,new Vector2(606,50));
             Cloud.CloudList.Add(cloud);
@@ -90,7 +91,7 @@ namespace Dinosaur_Game
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
-            if (Options.GameState != "Lose")
+            if (Options.GameState == GameState.GameOn)
             {
                 // ADD a cloud to the list every <TimeInterval>
                 cloudTimeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -133,7 +134,7 @@ namespace Dinosaur_Game
                     }
                     else
                     {
-                        Options.GameState = "Lose";
+                        Options.GameState = GameState.GameOver;
                     }
                 }
 
@@ -145,7 +146,7 @@ namespace Dinosaur_Game
                 else
                 {
                     KeyboardState keyState = Keyboard.GetState();
-                    if (keyState.IsKeyDown(Keys.Space))
+                    if (keyState.IsKeyDown(Keys.Space) || keyState.IsKeyDown(Keys.Up))
                     {
                         dinosaur.Jump();
                     }
@@ -170,7 +171,11 @@ namespace Dinosaur_Game
             backgroundSpriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.LinearWrap, null, null);
 
             // Draw backgroud ! Scroll Background ++
-            if (Options.GameState == "Lose") Options.IncreadingSpeedValue = 0;
+            if (Options.GameState == GameState.GameOver)
+            {   
+                // Stop Background Movement !
+                Options.IncreadingSpeedValue = 0;
+            }
             Options.SpeedValue += Options.IncreadingSpeedValue;
             backgroundSpriteBatch.Draw(background.Texture,new Vector2(0,0) , new Rectangle(Options.SpeedValue, 0, background.Texture.Width, background.Texture.Height), Color.White);
 
@@ -197,10 +202,10 @@ namespace Dinosaur_Game
             {
                 //spriteBatch.Draw(t,boundingBox, Color.Blue);
             }
-             * */
+            */
 
             // Update Dinosaur Frame every 0.1f if it's running !
-            if (!dinosaur.IsJumping)
+            if (!dinosaur.IsJumping && Options.GameState == GameState.GameOn)
             {
                 dinosaur.DinosaurTexture = Content.Load<Texture2D>("Sprites/Player/Dinosaur");
 

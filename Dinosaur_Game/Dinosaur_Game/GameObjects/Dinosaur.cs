@@ -15,7 +15,7 @@ namespace Dinosaur_Game
         public bool IsJumping { get; set; }
         public bool IsCollide { get; set; }
         public int Frame { get; set; }
-
+        
         public Rectangle BoundingBox { get; set; }
 
         private ContentManager content;
@@ -33,6 +33,11 @@ namespace Dinosaur_Game
 
             this.BoundingBox = new Rectangle((int)this.Position.X + 6, (int)this.Position.Y,
                                                                         this.DinosaurTexture.Width - 52, this.DinosaurTexture.Height);
+        }
+
+        public void SetDefaultDinosaur()
+        {
+            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
         }
 
         public void UpdateFrame()
@@ -59,7 +64,7 @@ namespace Dinosaur_Game
         public void Jump()
         {
             // Set Dinosaur Frame to default !
-            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
+            SetDefaultDinosaur();
 
             this.IsJumping = true;
             this.JumpSpeed = this.jumpSpeed;
@@ -69,7 +74,7 @@ namespace Dinosaur_Game
         public void WaitJump ()
         {
             // Update Y position : Dinosaur and BoundingBox
-            if (Options.GameState != "Lose") { this.Position.Y += this.JumpSpeed; }
+            if (Options.GameState == GameState.GameOn) { this.Position.Y += this.JumpSpeed; }
 
             Rectangle boundingBox = this.BoundingBox;
             boundingBox.Y = (int)this.Position.Y;
