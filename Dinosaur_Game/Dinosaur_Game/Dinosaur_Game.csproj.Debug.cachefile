@@ -7,4 +7,7 @@ Content\Sprites\Cactus\Cactus2.xnb
 Content\Sprites\Cactus\Cactus3.xnb
 Content\Sprites\Cactus\Cactus4.xnb
 Content\Sprites\Cactus\Cactus5.xnb
-Content\Font\ScoreFont.xnb
+Content\Sprites\Screen\GameOver.xnb
+Content\Sprites\Screen\Retry.xnb
+Content\Sprites\Player\GameOverDinosaur.xnb
+Content\Sprites\Screen\Numbers.xnb

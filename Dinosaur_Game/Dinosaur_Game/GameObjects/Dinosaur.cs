@@ -35,6 +35,11 @@ namespace Dinosaur_Game
                                                                         this.DinosaurTexture.Width - 52, this.DinosaurTexture.Height);
         }
 
+        public void SetGameOverDinosaur()
+        {
+            this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");
+        }
+
         public void SetDefaultDinosaur()
         {
             this.DinosaurTexture = content.Load<Texture2D>("Sprites/Player/DefaultDinosaur");

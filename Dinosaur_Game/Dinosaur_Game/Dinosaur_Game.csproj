@@ -111,7 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameObjects\Cloud.cs" />
-    <Compile Include="GameObjects\Score.cs" />
+    <Compile Include="GameSettings\GameScore\Numbers.cs" />
+    <Compile Include="GameSettings\GameScore\Score.cs" />
     <Compile Include="GameSettings\GameState.cs" />
     <Compile Include="GameSettings\Options.cs" />
     <Compile Include="GameObjects\Background.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="GameObjects\Sprite.cs" />
     <Compile Include="GameObjects\Cactus.cs" />
+    <Compile Include="Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dinosaur_GameContent\Dinosaur_GameContent.contentproj">

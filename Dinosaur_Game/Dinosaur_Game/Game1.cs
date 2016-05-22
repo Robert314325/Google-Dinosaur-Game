@@ -26,6 +26,8 @@ namespace Dinosaur_Game
         Cactus cactus;
         Score score;
 
+        KeyboardState keyState;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -50,8 +52,9 @@ namespace Dinosaur_Game
             dinosaur = new Dinosaur(this.Content);
             background = new Background(this.Content);
             cactus = new Cactus();
-            score = new Score(this.Content);
+            
             Options.Player = dinosaur;
+            Options.content = Content;
 
             cloud = new Cloud(this.Content,new Vector2(606,50));
             Cloud.CloudList.Add(cloud);
@@ -69,6 +72,9 @@ namespace Dinosaur_Game
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             backgroundSpriteBatch = new SpriteBatch(GraphicsDevice);
+
+            score = new Score();
+            score.LoadContent(this.Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -83,6 +89,8 @@ namespace Dinosaur_Game
 
         private float cloudTimeElapsed = 0f;
         private float cactusTimeElapsed = 0f;
+        private float delay = 0f;
+ 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -91,6 +99,16 @@ namespace Dinosaur_Game
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
+            if (Options.isNewGame)
+            {
+                Options.IncreadingSpeedValue = 5;
+                dinosaur.Position.Y = 102;
+                delay += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (delay < 10f) { delay++; return; }
+                delay = 0f;
+                Options.isNewGame = false;
+            }
+
             if (Options.GameState == GameState.GameOn)
             {
                 // ADD a cloud to the list every <TimeInterval>
@@ -125,15 +143,16 @@ namespace Dinosaur_Game
                 {
                     if (!Cactus.CactusBoundingBox[i].Intersects(dinosaur.BoundingBox))
                     {
-                        cactus.Position.X -= 5;
+                        cactus.Position.X -= Options.IncreadingSpeedValue;
 
                         Rectangle currentBoudningBox = Cactus.CactusBoundingBox[i];
-                        currentBoudningBox.X -= 5;
+                        currentBoudningBox.X -= Options.IncreadingSpeedValue;
                         Cactus.CactusBoundingBox[i] = currentBoudningBox;
                         i++;
                     }
                     else
                     {
+                        Options.isNewGame = false;
                         Options.GameState = GameState.GameOver;
                     }
                 }
@@ -145,11 +164,28 @@ namespace Dinosaur_Game
                 }
                 else
                 {
-                    KeyboardState keyState = Keyboard.GetState();
+                    keyState = Keyboard.GetState();
                     if (keyState.IsKeyDown(Keys.Space) || keyState.IsKeyDown(Keys.Up))
                     {
                         dinosaur.Jump();
                     }
+                }
+            }
+
+            if (Options.GameState == GameState.GameOver)
+            {
+                delay += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (delay < 10f) { delay++; return;  }
+
+                keyState = Keyboard.GetState();
+                if (keyState.IsKeyDown(Keys.Space) || keyState.IsKeyDown(Keys.Up))
+                {
+                    Cactus.CactusList.Clear();
+                    Cactus.CactusBoundingBox.Clear();
+                    Options.GameState = GameState.GameOn;
+                    Options.isNewGame = true;
+                    Score.CurrentScore = 0;
+                    delay = 0f;
                 }
             }
 
@@ -164,6 +200,7 @@ namespace Dinosaur_Game
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            Options.spriteBatch = spriteBatch;
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null);
@@ -171,14 +208,22 @@ namespace Dinosaur_Game
             backgroundSpriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.LinearWrap, null, null);
 
             // Draw backgroud ! Scroll Background ++
+
             if (Options.GameState == GameState.GameOver)
-            {   
+            {
                 // Stop Background Movement !
+
                 Options.IncreadingSpeedValue = 0;
+                Score.NextGoal = 100;
             }
+            else
+            {
+                if (Score.CurrentScore >= Score.NextGoal) { Options.IncreadingSpeedValue++; Score.NextGoal += 100; }
+            }
+            
             Options.SpeedValue += Options.IncreadingSpeedValue;
             backgroundSpriteBatch.Draw(background.Texture,new Vector2(0,0) , new Rectangle(Options.SpeedValue, 0, background.Texture.Width, background.Texture.Height), Color.White);
-
+            score.Draw(backgroundSpriteBatch);
             backgroundSpriteBatch.End();
 
             // Draw All Clouds 
@@ -187,22 +232,11 @@ namespace Dinosaur_Game
                 spriteBatch.Draw(cloud.Texture, cloud.Position, new Rectangle(0, 0, cloud.Texture.Width, cloud.Texture.Height), Color.White);
             }
 
-            /*
-            var t = new Texture2D(GraphicsDevice, 1, 1);
-            t.SetData(new[] { Color.White });
-            */
-
             // Draw All Cactus
             foreach (Cactus cactus in Cactus.CactusList)
             {
                 spriteBatch.Draw(cactus.Texture, cactus.Position, new Rectangle(0, 0, cactus.Texture.Width, cactus.Texture.Height), Color.White);
             }
-            /*
-            foreach (Rectangle boundingBox in Cactus.CactusBoundingBox)
-            {
-                //spriteBatch.Draw(t,boundingBox, Color.Blue);
-            }
-            */
 
             // Update Dinosaur Frame every 0.1f if it's running !
             if (!dinosaur.IsJumping && Options.GameState == GameState.GameOn)
@@ -213,6 +247,7 @@ namespace Dinosaur_Game
                 if (timeElapsed > 0.1f)
                 {
                     dinosaur.UpdateFrame();
+                    Score.CurrentScore++;
                     timeElapsed = 0f;
                 }
 
@@ -222,9 +257,31 @@ namespace Dinosaur_Game
             else
             {
                 spriteBatch.Draw(dinosaur.DinosaurTexture, dinosaur.Position, new Rectangle(0, 0, dinosaur.DinosaurTexture.Width, dinosaur.DinosaurTexture.Height), Color.White);
+
+                timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (timeElapsed > 0.1f)
+                {
+                    if (Options.GameState == GameState.GameOn) { Score.CurrentScore++; }
+                    timeElapsed = 0f;
+                }
             }
-            //spriteBatch.Draw(t, dinosaur.BoundingBox, Color.Black);
-            
+
+            // Draw Score on the screen
+            score.Draw(spriteBatch);
+
+            if (Options.GameState == GameState.GameOver)
+            {
+                // Draw Game Over on the screen
+
+                Texture2D gameOverTexture = Content.Load<Texture2D>("Sprites/Screen/GameOver");
+                Texture2D retryTexture = Content.Load<Texture2D>("Sprites/Screen/Retry");
+
+                spriteBatch.Draw(gameOverTexture, new Vector2(215, 50),
+                                 new Rectangle(0, 0, gameOverTexture.Width, gameOverTexture.Height), Color.White);
+                spriteBatch.Draw(retryTexture, new Vector2(290, 80),
+                                 new Rectangle(0, 0, retryTexture.Width, retryTexture.Height), Color.White);
+            }
+
             spriteBatch.End();
 
             base.Draw(gameTime);
